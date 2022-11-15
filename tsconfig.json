@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "lib": ["esnext"],
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "noEmit": true,
+      "strict": true,
+      "target": "esnext",
+    },
+    "exclude": ["node_modules", "jest.config.js"]
+  }
+  

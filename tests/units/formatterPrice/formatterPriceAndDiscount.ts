@@ -1,12 +1,14 @@
+const formatter = (num: number, p: number) => Math.round(num * (Math.pow(10, p)))/Math.pow(10, p);
+
 const decimalPlaces = function(num: number, p: number) {
-  const formated = Math.round(num * (Math.pow(10, p)))/Math.pow(10, p);
   let result: string;
-  if (formated.toString().length === 2) {
-    result = '0' + formated.toString();
-  } else if (formated.toString().length === 1) {
-    result = '00' + formated.toString();
+  const formatted = formatter(num, p);
+  if (formatted.toString().length === 2) {
+    result = '0' + formatted.toString();
+  } else if (formatted.toString().length === 1) {
+    result = '00' + formatted.toString();
   } else {
-    result = formated.toString();
+    result = formatted.toString();
   }
   return result
 };
@@ -20,4 +22,4 @@ const formatterDiscount = (discount: number) => {
   return discount !== 0 ? `-${discount >= 1000 ? ' ' : ''}${Math.floor(discount / 1000) || ''} ${discount >= 1000 ? result : parseInt(result)} ₽` : '0';
 }
 
-module.exports = { formatterPrice, formatterDiscount }
+export { formatterPrice, formatterDiscount, formatter }

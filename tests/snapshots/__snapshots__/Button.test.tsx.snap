@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`компонент Button корректно отображается на экране 1`] = `
+<button
+  className="primary"
+  disabled={false}
+  onClick={[Function]}
+>
+  Кнопка
+</button>
+`;
